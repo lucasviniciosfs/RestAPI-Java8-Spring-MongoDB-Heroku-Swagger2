@@ -8,3 +8,9 @@ addons:
       - oracle-java8-installer
 before_install:
   - chmod +x mvnw
+spring:
+   jpa:
+     properties:
+       hibernate:
+         jdbc:
+           time_zone = BRT
