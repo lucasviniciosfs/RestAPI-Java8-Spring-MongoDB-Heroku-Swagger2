@@ -43,6 +43,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		<dependency>
+		  <groupId>org.springframework.data </groupId>
+		  <artifactId>spring-data-jpa </artifactId>
+		</dependency>
 		<!-- MySQL -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -53,10 +57,19 @@
 		  <groupId>com.h2database</groupId>
 		  <artifactId>h2</artifactId>
 		</dependency>
-		<!-- FlyWay -->
+		<!-- FlyWay 
 		<dependency>
     		<groupId>org.flywaydb</groupId>
     		<artifactId>flyway-core</artifactId>
+		</dependency>-->
+		<!-- Hibernate -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
 	</dependencies>
 	<repositories>
