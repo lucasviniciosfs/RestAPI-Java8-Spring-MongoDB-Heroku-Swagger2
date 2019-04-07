@@ -11,4 +11,3 @@ public class RestApiJava8SpringMongoDbHerokuSwagger2Application {
 	}
 
 }
-

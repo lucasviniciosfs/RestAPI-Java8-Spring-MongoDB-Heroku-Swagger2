@@ -10,7 +10,8 @@ This project has the purpose of studying Spring Boot and some tools. Here I use 
   - H2
   - BCrypt
   - Spring Tool Suite
-
+  - Hikari
+ 	
 License
 ----
 

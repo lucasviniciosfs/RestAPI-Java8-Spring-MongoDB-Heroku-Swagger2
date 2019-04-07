@@ -57,11 +57,6 @@
 		  <groupId>com.h2database</groupId>
 		  <artifactId>h2</artifactId>
 		</dependency>
-		<!-- FlyWay 
-		<dependency>
-    		<groupId>org.flywaydb</groupId>
-    		<artifactId>flyway-core</artifactId>
-		</dependency>-->
 		<!-- Hibernate -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
@@ -70,6 +65,11 @@
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<!-- HikariCP -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
 		</dependency>
 	</dependencies>
 	<repositories>
