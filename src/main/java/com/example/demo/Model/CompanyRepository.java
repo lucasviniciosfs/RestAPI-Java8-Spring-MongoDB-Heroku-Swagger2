@@ -10,7 +10,7 @@ import com.example.demo.Entity.Company;
 
 /**
  * @author Lucas
- *
+ * Class used to do operations with bd
  */
 @Repository
 public interface CompanyRepository extends JpaRepository<Company, Long> {
