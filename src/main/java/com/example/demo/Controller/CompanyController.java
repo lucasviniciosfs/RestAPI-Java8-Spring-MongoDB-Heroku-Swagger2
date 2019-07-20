@@ -1,7 +1,10 @@
 package com.example.demo.Controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,9 +33,18 @@ public class CompanyController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<CompanyDTO> singupCompany(@RequestBody CompanyDTO companyDTO){
-		companyDTO.setId(1L);
-		return ResponseEntity.ok(companyDTO);
+	public ResponseEntity<Response<CompanyDTO>> singup(@Valid @RequestBody CompanyDTO companyDto,
+													   BindingResult result) {
+		Response<CompanyDTO> response = new Response<CompanyDTO>();
+		if (result.hasErrors()) {
+			result.getAllErrors().forEach(error ->
+			response.getErrors().add(error.getDefaultMessage()));
+			return ResponseEntity.badRequest().body(response);
+		}
+
+		companyDto.setId(1L);
+		response.setData(companyDto);
+		return ResponseEntity.ok(response);
 	}
 
 }
