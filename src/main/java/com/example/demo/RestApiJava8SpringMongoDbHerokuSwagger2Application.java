@@ -12,5 +12,6 @@ public class RestApiJava8SpringMongoDbHerokuSwagger2Application  {
 	public static void main(String[] args) {
 		SpringApplication.run(RestApiJava8SpringMongoDbHerokuSwagger2Application.class, args);
 	}
-
+	
+	//parei no topico 24 e nao consigo fazer o post
 }
